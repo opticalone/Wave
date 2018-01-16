@@ -5867,7 +5867,7 @@ MonoBehaviour:
     rightWheel: {fileID: 590396721}
     motor: 1
     steering: 0
-  maxMotorTorque: 400
+  maxMotorTorque: 4000
   maxSteeringAngle: 35
 --- !u!1 &378286157
 GameObject:
@@ -14500,6 +14500,7 @@ GameObject:
   - component: {fileID: 1027875620}
   - component: {fileID: 1027875622}
   - component: {fileID: 1027875621}
+  - component: {fileID: 1027875623}
   m_Layer: 0
   m_Name: Mesh1_Group1_Model
   m_TagString: Untagged
@@ -14562,6 +14563,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027875619}
+  m_Mesh: {fileID: 4300000, guid: 6aa8ccd8193678e4d8ad7f0a66fc7a92, type: 3}
+--- !u!64 &1027875623
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1027875619}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 6aa8ccd8193678e4d8ad7f0a66fc7a92, type: 3}
 --- !u!1 &1028499092
 GameObject:
