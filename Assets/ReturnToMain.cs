@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class menuOptions : MonoBehaviour
-{
+public class ReturnToMain : MonoBehaviour {
+
     public GameObject startMarker;
     public GameObject endMarker;
     public GameObject anythingbutcamera;
@@ -15,9 +15,9 @@ public class menuOptions : MonoBehaviour
     public void optionsClicked()
     {
 
-        anythingbutcamera.transform.position = Vector3.Lerp(startMarker.transform.position, endMarker.transform.position, 10000 * Time.deltaTime);
-        mainMenuButtons.SetActive(false);
-        optionsMenuButtons.SetActive(true);
+        anythingbutcamera.transform.position = Vector3.Lerp(endMarker.transform.position, startMarker.transform.position, 10000 * Time.deltaTime);
+        mainMenuButtons.SetActive(true);
+        optionsMenuButtons.SetActive(false);
     }
 
 }
