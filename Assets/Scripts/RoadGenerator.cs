@@ -7,7 +7,7 @@ public class RoadGenerator : MonoBehaviour
 
     // road chunk prefab
     public GameObject roadChunk;
-
+    public GameObject roadChunk2;
     // distance between edges of the chunk.
     public float chunkLength;
 
@@ -27,7 +27,7 @@ public class RoadGenerator : MonoBehaviour
     private Transform currentChunk;
     private int indexOfCurrentChunk;
     private int currentChunkPosition = 0;
-
+    private int currentChunkNum = 0;
     private void Awake()
     {
         InitializeChunksList();
@@ -35,15 +35,35 @@ public class RoadGenerator : MonoBehaviour
 
     private void InitializeChunksList()
     {
-        chunks = new Queue<Transform>();
-        for (int i = 0; i < numberOfChunks; i++)
+        if (currentChunkNum == 0)
         {
-            GameObject _chunk = Instantiate<GameObject>(roadChunk);
-            _chunk.transform.position = NextChunkPosition();
-            if (i != 0)
-                _chunk.SetActive(false);
-            chunks.Enqueue(_chunk.transform);
+            chunks = new Queue<Transform>();
+            for (int i = 0; i < numberOfChunks; i++)
+            {
+                GameObject _chunk = Instantiate<GameObject>(roadChunk);
+                _chunk.transform.position = NextChunkPosition();
+                if (i != 0)
+                    _chunk.SetActive(false);
+                chunks.Enqueue(_chunk.transform);
+                currentChunkNum++;
+
+            }
         }
+        if (currentChunkNum == 1)
+        {
+            chunks = new Queue<Transform>();
+            for (int i = 0; i < numberOfChunks; i++)
+            {
+                GameObject _chunk = Instantiate<GameObject>(roadChunk2);
+                _chunk.transform.position = NextChunkPosition();
+                if (i != 0)
+                    _chunk.SetActive(false);
+                chunks.Enqueue(_chunk.transform);
+                currentChunkNum--;
+
+            }
+        }
+
     }
 
     private void Start()
