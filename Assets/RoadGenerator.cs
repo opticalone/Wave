@@ -7,6 +7,14 @@ public class RoadGenerator : MonoBehaviour
 
     // road chunk prefab
     public GameObject roadChunk;
+    public GameObject roadChunk2;
+    public GameObject roadChunk3;
+    public GameObject roadChunk4;
+    public GameObject roadChunk5;
+    public GameObject roadChunk6;
+
+
+
 
     // distance between edges of the chunk.
     public float chunkLength;

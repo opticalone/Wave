@@ -17,12 +17,16 @@ public class SimpleCarController : MonoBehaviour
     public float maxMotorTorque;
     public float maxSteeringAngle;
 
+
+    WheelFrictionCurve normal;
+    WheelFrictionCurve Drift;
     // finds the corresponding visual wheel
     // correctly applies the transform
     public void ApplyLocalPositionToVisuals(WheelCollider collider)
     {
         if (collider.transform.childCount == 0)
         {
+            
             return;
         }
 
@@ -40,7 +44,7 @@ public class SimpleCarController : MonoBehaviour
     {
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
-
+       
         foreach (AxleInfo axleInfo in axleInfos)
         {
             if (axleInfo.steering)
