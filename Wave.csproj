@@ -76,12 +76,6 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Wave.Plugins.csproj">
@@ -94,11 +88,16 @@
     <Compile Include="Assets\Scripts\CameraBehaviors.cs" />
     <Compile Include="Assets\Scripts\exitScrript.cs" />
     <Compile Include="Assets\Scripts\menuOptions.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ReturnToMain.cs" />
     <Compile Include="Assets\Scripts\RoadGenerator.cs" />
     <Compile Include="Assets\Scripts\SimpleCarController.cs" />
+    <Compile Include="Assets\VolumetricLights\Scripts\VolumetricLight.cs" />
+    <Compile Include="Assets\VolumetricLights\Scripts\VolumetricLightRenderer.cs" />
+    <Compile Include="Assets\VolumetricLights\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
+    <Compile Include="Assets\VolumetricLights\Standard Assets\Effects\ImageEffects\Scripts\Tonemapping.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Destroyed_city_FREE\Destroyed_city_FREE_Info.txt" />
@@ -126,6 +125,10 @@
     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
+    <None Include="Assets\VolumetricLights\Shaders\BilateralBlur.shader" />
+    <None Include="Assets\VolumetricLights\Shaders\BlitAdd.shader" />
+    <None Include="Assets\VolumetricLights\Shaders\VolumetricLight.shader" />
+    <None Include="Assets\VolumetricLights\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
