@@ -35,7 +35,7 @@ public class RoadGenerator : MonoBehaviour
     private Transform currentChunk;
     private int indexOfCurrentChunk;
     private int currentChunkPosition = 0;
-
+    private int WhichChunk;
     private void Awake()
     {
         InitializeChunksList();
