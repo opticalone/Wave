@@ -8,7 +8,7 @@ public class RoadGenerator : MonoBehaviour
     // road chunk prefab
     public GameObject roadChunk;
     public GameObject roadChunk2;
-<<<<<<< HEAD:Assets/RoadGenerator.cs
+
     public GameObject roadChunk3;
     public GameObject roadChunk4;
     public GameObject roadChunk5;
@@ -17,8 +17,7 @@ public class RoadGenerator : MonoBehaviour
 
 
 
-=======
->>>>>>> michael:Assets/Scripts/RoadGenerator.cs
+
     // distance between edges of the chunk.
     public float chunkLength;
 
@@ -38,11 +37,11 @@ public class RoadGenerator : MonoBehaviour
     private Transform currentChunk;
     private int indexOfCurrentChunk;
     private int currentChunkPosition = 0;
-<<<<<<< HEAD:Assets/RoadGenerator.cs
+
     private int WhichChunk;
-=======
+
     private int currentChunkNum = 0;
->>>>>>> michael:Assets/Scripts/RoadGenerator.cs
+
     private void Awake()
     {
         InitializeChunksList();

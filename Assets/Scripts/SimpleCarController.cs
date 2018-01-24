@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 [System.Serializable]
 
 
@@ -28,11 +28,13 @@ public class SimpleCarController : MonoBehaviour
     public float maxSteeringAngle;
     public Rigidbody rb;
     public GameObject player;
+    public Collider Finish;
     public Transform trans;
     Vector3 StartPos;
     
+
     public Text speedText;
-    public Text winText;
+
   
     public WheelFrictionCurve normal;
 
@@ -75,33 +77,19 @@ public class SimpleCarController : MonoBehaviour
     }
 
 
+
     public void Update()
     {
         var mph = rb.velocity.magnitude * 2.237;
         speedText.text = (int)mph + " Miles Per Hour";
-        if (mph >= 30)
-        {
-            winText.text = "you Win"; 
-        }
-        else
-        {
-            winText.text = " ";
-        }
+        
+        
+        
+            
+        
         if(Input.GetKey(KeyCode.R))
         {
-            player.transform.position = StartPos;
-            rb.velocity = Vector3.zero;
-            foreach (AxleInfo axleInfo in axleInfos)
-            {
-                
-                if (axleInfo.motor)
-                {
-
-                    axleInfo.leftWheel.brakeTorque = maxMotorTorque * 1000;
-                    axleInfo.rightWheel.brakeTorque = maxMotorTorque * 1000;
-                }
-                
-            }
+            SceneManager.LoadScene("Michael");
         }
 
         if (Input.GetKey(KeyCode.Space))

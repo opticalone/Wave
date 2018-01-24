@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/wave.unity
+    path: Assets/Michael - test -.unity
+    guid: f0ba43f2a4d35334fa1114cf477a446f
+  - enabled: 0
+    path: Assets/shea's scene.unity
     guid: 0b3cffcd42f85f2438cb27dbda3f335b
